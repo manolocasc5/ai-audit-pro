@@ -14,7 +14,7 @@ def consultar_auditor():
     # 1. Configuración de modelos
     print("🧠 Conectando con los modelos locales...")
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
-    llm = OllamaLLM(model="gpt-oss")
+    llm = OllamaLLM(model="gpt-oss", streaming=True)
 
     # 2. Cargar la base de datos vectorial
     print("📂 Cargando base de datos de auditoría...")
